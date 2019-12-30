@@ -10,7 +10,18 @@ import com.learn.junit5.exceptions.MathUtilsException;
  */
 public class MathUtils {
 
-  public int add(int a, int b) {
+  /**
+   * Add 2 non-zero numbers
+   * 
+   * @param a
+   * @param b
+   * @return
+   * @throws MathUtilsException
+   */
+  public int add(int a, int b) throws MathUtilsException {
+    if (a == 0 && b == 0) {
+      throw new MathUtilsException("Invalid input, both additives are zero");
+    }
     return a + b;
   }
 

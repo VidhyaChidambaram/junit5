@@ -37,7 +37,7 @@ public class MathUtilsTest {
   }
 
   @Test
-  public void testAdd_Success() {
+  public void testAdd_Success() throws MathUtilsException {
     int result = mathUtils.add(1, 4);
     Assertions.assertEquals(5, result, "testAdd_Success failed");
   }
@@ -63,6 +63,10 @@ public class MathUtilsTest {
         "MathUtilsException should be thrown for input=1");
   }
 
+  /**
+   * If a test is disabled this will not run. As of JUnit Jupiter, @Ignore does not work anymore
+   * unless vintage is used
+   */
   @Test
   @Disabled
   public void test_UnimplementedFeature() {
