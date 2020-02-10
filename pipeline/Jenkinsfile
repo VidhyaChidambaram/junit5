@@ -1,0 +1,19 @@
+pipeline {
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Step 1'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Start running tests'
+            }
+        }
+
+        stage('Deploy') {
+            echo 'Start running deploy'
+        }
+    }
+}
